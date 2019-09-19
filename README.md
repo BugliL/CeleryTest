@@ -9,9 +9,11 @@ sudo apt-get install rabbitmq-server supervisor
 
 
 ## Documentations - [Source](https://www.linode.com/docs/development/python/task-queue-celery-rabbitmq/#write-a-celery-application)
-A Celery application is composed of two parts:
+A Celery application is composed of three parts:
  - **Workers** that wait for messages from RabbitMQ and execute the tasks.
  - **Client** that submit messages to RabbitMQ to trigger task execution, and eventually retrieve the result at a later time
+ - **Message broker**. The client communicates with the the workers through a message queue, and Celery supports several ways to implement these queues. The most commonly used brokers are RabbitMQ and Redis.
+
 
 The tasks are defined in a module that will be used both by the workers and the client. Workers will run the code to execute tasks, and clients will only use function definitions to expose them and hide the RabbitMQ publishing complexity.
 
