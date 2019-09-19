@@ -1,0 +1,3 @@
+# Not to merge between branch if changed
+settings.py merge=ours
+*.conf merge=ours
