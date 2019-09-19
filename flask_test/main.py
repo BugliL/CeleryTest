@@ -13,7 +13,7 @@ def hello():
     return "Hello World!"
 
 
-@celery.task(name='main.reverse')
+@celery.task(name='celery_example_task')
 def example_task():
     return "This is an example task"
 

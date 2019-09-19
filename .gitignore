@@ -414,3 +414,9 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/flask
+
+
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir
+celerybeat.pid
